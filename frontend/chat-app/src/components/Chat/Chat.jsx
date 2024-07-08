@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import UserInput from "../UserInput/UserInput";
-import { TextField, Button, Container, Box } from "@mui/material";
+import { TextField, Button, Container, Box, Typography } from "@mui/material";
 
 const socket = io("http://localhost:5000");
 
@@ -64,6 +64,9 @@ export default function Chat() {
 
 	return (
 		<Container>
+			<Typography variant="h4" align="center" gutterBottom>
+				Simple Chat App
+			</Typography>
 			{!isRegistered ? (
 				<Box
 					display="flex"
